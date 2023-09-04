@@ -7,13 +7,9 @@
 #include "ButtonBase.h"
 
 
-
-
-MomentaryButton::MomentaryButton(uint8_t input_pin, int button_number): ButtonBase(input_pin, button_number)
+MomentaryButton::MomentaryButton(InputChannel* channel, int button_number): ButtonBase(channel, button_number)
 {
 }
-
-
 
 void MomentaryButton::state_changed(uint8_t current_state) 
 {

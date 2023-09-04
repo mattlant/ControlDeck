@@ -36,7 +36,7 @@
     <ClCompile Include="src\MomentaryButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\PFC8574InputChannel.cpp">
+    <ClCompile Include="src\PCF8574InputChannel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\ToggleSwitch.cpp">
@@ -46,6 +46,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\DigitalInputChannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InputChannelFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -68,7 +71,7 @@
     <ClInclude Include="src\MomentaryButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\PFC8574InputChannel.h">
+    <ClInclude Include="src\PCF8574InputChannel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\ToggleSwitch.h">
@@ -78,6 +81,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\DigitalInputChannel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\InputChannelFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -8,7 +8,7 @@ MainBoardInputChannel::MainBoardInputChannel(uint8_t pin): DigitalInputChannel(p
 {
 }
 
-int MainBoardInputChannel::read()
+int MainBoardInputChannel::read_int()
 {
 	return digitalRead(pin_);
 }

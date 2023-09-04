@@ -16,7 +16,7 @@
 class MomentaryButton : public ButtonBase
 {
 public:
-	MomentaryButton(uint8_t input_pin, int button_number);
+	MomentaryButton(InputChannel* channel, int button_number);
 
 protected:
 	void state_changed(uint8_t current_state) override;

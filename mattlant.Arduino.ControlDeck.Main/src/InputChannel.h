@@ -18,7 +18,9 @@ public:
 
 
 
-	virtual int read();
+	virtual int read_int();
+	virtual uint8_t read_byte();
+	virtual bool read_bit();
 	virtual void setup();
 };
 

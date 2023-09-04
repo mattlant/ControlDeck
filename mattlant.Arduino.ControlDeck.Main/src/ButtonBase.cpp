@@ -6,23 +6,23 @@
 #include "util.h"
 
 
-ButtonBase::ButtonBase(uint8_t input_pin, int button_number): input_pin_(input_pin),
-                                                              button_number_(button_number)
-{
-}
 
 void ButtonBase::state_changed(uint8_t current_state)
 {
 }
 
+ButtonBase::ButtonBase(InputChannel* channel, int button_number): channel_(channel), button_number_(button_number)
+{
+}
+
 void ButtonBase::setup()
 {
-	pinMode(input_pin_, INPUT);
+	channel_->setup();
 }
 
 void ButtonBase::process()
 {
-	const uint8_t current_state = !digitalRead(input_pin_);
+	const uint8_t current_state = channel_->read_byte();
 	//SER_PRINTLN("BUTTON_PROC");
 	if (last_input_state_ != current_state)
 	{

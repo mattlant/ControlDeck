@@ -2,40 +2,38 @@
 #include "util.h"
 
 
-ToggleSwitch::ToggleSwitch(uint8_t input_pin, uint8_t button_number, uint8_t led_pin):
-	ButtonBase(input_pin, button_number), led_pin_(led_pin)
-
+ToggleSwitch::ToggleSwitch(InputChannel* channel, uint8_t button_number, uint8_t led_pin)
+	: ButtonBase(channel, button_number), led_pin_(led_pin)
 {
 	if (led_pin > 0)
 		use_led_ = true;
 }
-
 
 void ToggleSwitch::update_led() const
 {
 	digitalWrite(led_pin_, last_input_state_);
 }
 
-void ToggleSwitch::setup() 
+
+void ToggleSwitch::setup()
 {
 	ButtonBase::setup();
 
 	SER_PRINT("TOGGLE::SETUP BUTTONNUM=");
 	SER_PRINTLN(button_number_);
 
-	last_input_state_ = !digitalRead(input_pin_);
+	last_input_state_ = channel_->read_byte();
 	if (use_led_)
 		update_led();
 }
 
-void ToggleSwitch::process() 
+void ToggleSwitch::process()
 {
 	process_button_press();
 	if (is_pressing_button)
 		return;
 
 	ButtonBase::process();
-
 }
 
 void ToggleSwitch::state_changed(uint8_t current_state)

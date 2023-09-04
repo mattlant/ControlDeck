@@ -18,7 +18,7 @@ constexpr int toggle_switch_button_press_timespan = 100;
 class ToggleSwitch : public ButtonBase
 {
 public:
-	ToggleSwitch(uint8_t input_pin, uint8_t button_number, uint8_t led_pin = 0);
+	ToggleSwitch(InputChannel* channel, uint8_t button_number, uint8_t led_pin = 0);
 	void setup() override;
 	void process() override;
 
