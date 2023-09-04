@@ -29,7 +29,7 @@ void ButtonBase::process()
 	//SER_PRINTLN("BUTTON_PROC");
 	if (last_input_state_ != current_state)
 	{
-		SER_PRINT("CHANGEDSTATE=");
+		SER_PRINT("ButtonBase.Process:State Changed=");
 		SER_PRINTLN(current_state == HIGH ? "ON" : "OFF");
 
 		this->state_changed(current_state);

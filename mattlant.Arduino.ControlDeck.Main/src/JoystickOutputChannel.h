@@ -23,27 +23,32 @@ enum JoystickButtons
 class JoystickOutputChannel : public OutputChannel
 {
 private:
-	Joystick_ joy_ref;
-
-protected:
-	Joystick_* joystick_;
 
 public:
 	JoystickOutputChannel(uint8_t hid_report_id, int output_ids[], int output_count)
 		: OutputChannel(output_ids, output_count)
 	{
-		joy_ref = Joystick_(hid_report_id,JOYSTICK_TYPE_JOYSTICK, 32, 0,
-		                    false, false, false, false, false, false,
-		                    false, false, false, false, false);
-		joystick_ = &joy_ref;
+		//joy_ref = Joystick_(hid_report_id,JOYSTICK_TYPE_JOYSTICK, 32, 0,
+		//                    false, false, false, false, false, false,
+		//                    false, false, false, false, false);
+
+		//using 'new' because this will never actually require removal while in operation
+		joystick_ = new Joystick_(hid_report_id,JOYSTICK_TYPE_JOYSTICK, 32, 0,
+		                          false, false, false, false, false, false,
+		                          false, false, false, false, false);
 	}
 
-	void setup() const
+	~JoystickOutputChannel() = default;
+
+	void setup() override
 	{
 		joystick_->begin();
 	}
 
-	void write(int button_id, int value) const;
+	void write(int button_id, int value) override;
+
+protected:
+	Joystick_* joystick_;
 };
 
 #endif

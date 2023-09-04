@@ -20,11 +20,13 @@ public:
 	{
 	}
 
-	void setup()
+	~OutputChannel() = default;
+
+	virtual void setup()
 	{
 	}
 
-	void write(int output_id, int value)
+	virtual void write(int output_id, int value)
 	{
 	}
 };
