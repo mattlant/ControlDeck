@@ -4,6 +4,6 @@
 
 #include "DigitalInputChannel.h"
 
-DigitalInputChannel::DigitalInputChannel(uint8_t pin): pin_(pin)
+DigitalInputChannel::DigitalInputChannel(int line_ids[], int line_count): InputChannel(line_ids, line_count)
 {
 }

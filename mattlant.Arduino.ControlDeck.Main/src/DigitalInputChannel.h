@@ -10,13 +10,12 @@
 #endif
 #include "InputChannel.h"
 
+//TODO: REMOVE THIS CLASS - HAS NO MORE USE
 class DigitalInputChannel: public InputChannel
 {
 public:
-	explicit DigitalInputChannel(uint8_t pin);
+	explicit DigitalInputChannel(int line_ids[], int line_count);
 
-protected:
-	uint8_t pin_ = 0;
 
 };
 

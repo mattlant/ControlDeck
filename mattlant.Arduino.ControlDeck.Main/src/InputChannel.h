@@ -11,16 +11,19 @@
 
 class InputChannel
 {
+protected:
+	int* input_ids_;
+	int input_count_;
 
 public:
 	virtual ~InputChannel();
-	InputChannel();
+	explicit InputChannel(int input_ids[], int input_count);
 
 
 
-	virtual int read_int();
-	virtual uint8_t read_byte();
-	virtual bool read_bit();
+	virtual int read_int(int input_id);
+	virtual uint8_t read_byte(int input_id);
+	virtual bool read_bit(int input_id);
 	virtual void setup();
 };
 

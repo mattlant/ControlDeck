@@ -15,18 +15,20 @@
 class ButtonBase
 {
 public:
-	ButtonBase(InputChannel* channel, int button_number);
+	ButtonBase(InputChannel* channel, int input_id, int button_number);
 	virtual void setup();
 	virtual void process();
 	void set_joystick(Joystick_& joystick);
 
 protected:
+	InputChannel* channel_;
+	int input_id_;
+
 	Joystick_* joystick_;
 	uint8_t button_number_;
 	uint8_t last_input_state_ = 0;
 
 	uint8_t monitor_led = 8;
-	InputChannel* channel_;
 	virtual void state_changed(uint8_t current_state);
 
 };

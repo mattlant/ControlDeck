@@ -15,8 +15,8 @@ class MainBoardInputChannel : public DigitalInputChannel
 {
 
 public:
-	explicit MainBoardInputChannel(uint8_t input_pin);
-	int read_int() override;
+	explicit MainBoardInputChannel(int input_ids[], int line_count);
+	int read_int(int pin_id) override;
 	void setup() override;
 };
 

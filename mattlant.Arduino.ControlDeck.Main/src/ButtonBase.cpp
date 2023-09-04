@@ -11,7 +11,10 @@ void ButtonBase::state_changed(uint8_t current_state)
 {
 }
 
-ButtonBase::ButtonBase(InputChannel* channel, int button_number): channel_(channel), button_number_(button_number)
+ButtonBase::ButtonBase(InputChannel* channel, int input_id, int button_number):
+	channel_(channel),
+	input_id_(input_id),
+	button_number_(button_number)
 {
 }
 
@@ -22,7 +25,7 @@ void ButtonBase::setup()
 
 void ButtonBase::process()
 {
-	const uint8_t current_state = channel_->read_byte();
+	const uint8_t current_state = channel_->read_byte(input_id_);
 	//SER_PRINTLN("BUTTON_PROC");
 	if (last_input_state_ != current_state)
 	{

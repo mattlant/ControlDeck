@@ -11,27 +11,26 @@
 constexpr uint8_t LOOP_DELAY = 20;
 constexpr uint8_t BUTTON_COUNT = 2;
 
-MainBoardInputChannel channel_pin_4 = MainBoardInputChannel(4);
-MainBoardInputChannel channel_pin_7 = MainBoardInputChannel(7);
+int uno_pins[2] = {4,7};
+int ioboard1_pins[2] = {4,7};
+
+MainBoardInputChannel uno_input_channel = MainBoardInputChannel(uno_pins, 2);
 PCF8574 io_board_1 = PCF8574(0x20);
-PCF8574InputChannel io_exp_p0 = PCF8574InputChannel(P0, &io_board_1);
-PCF8574InputChannel io_exp_p1 = PCF8574InputChannel(P1, &io_board_1);
+PCF8574InputChannel ioboard1_input_channel = PCF8574InputChannel(&io_board_1, ioboard1_pins, 2);
 
 
-MomentaryButton btn1 = MomentaryButton(&io_exp_p0, 2);
-ToggleSwitch ts1 = ToggleSwitch(&io_exp_p1, 0, 9);
+MomentaryButton btn1 = MomentaryButton(&uno_input_channel,4, 2);
+ToggleSwitch ts1 = ToggleSwitch(&uno_input_channel,7, 0, 9);
 ButtonBase* buttons_array[BUTTON_COUNT] = {&ts1, &btn1};
 ButtonBox button_box = ButtonBox(buttons_array, BUTTON_COUNT, LOOP_DELAY);
 
 void setup()
 {
-	io_exp_p0.setup();
-	io_exp_p1.setup();
-
+	uno_input_channel.setup();
+	ioboard1_input_channel.setup();
 	button_box.setup();
-	io_board_1.begin();
-
 }
+
 void loop()
 {
 	button_box.process();
