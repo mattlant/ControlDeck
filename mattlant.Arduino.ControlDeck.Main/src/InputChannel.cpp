@@ -4,11 +4,14 @@
 
 #include "InputChannel.h"
 
-InputChannel::InputChannel(uint8_t input_pin): input_pin_(input_pin)
-{
-}
+InputChannel::~InputChannel()
+= default;
 
-uint8_t InputChannel::read()
+
+InputChannel::InputChannel()
+= default;
+
+int InputChannel::read()
 {
 	return LOW;
 }

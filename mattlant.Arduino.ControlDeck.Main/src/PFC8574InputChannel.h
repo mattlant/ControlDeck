@@ -11,15 +11,17 @@
 #include "InputChannel.h"
 #include <PCF8574.h>
 
-class PFC8574InputChannel : public InputChannel
+#include "DigitalInputChannel.h"
+
+class PFC8574InputChannel : public DigitalInputChannel
 {
 public:
 	//TODO: Inject the board itself so it can be reused and started across all inputs.
-	PFC8574InputChannel(uint8_t input_pin, PCF8574* io_board);
+	PFC8574InputChannel(uint8_t pin, PCF8574* io_board);
 
 
 public:
-	uint8_t read() override;
+	int read() override;
 	void setup() override;
 
 protected:

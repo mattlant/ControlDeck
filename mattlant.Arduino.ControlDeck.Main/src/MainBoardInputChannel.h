@@ -8,16 +8,16 @@
 #else
 	#include "WProgram.h"
 #endif
+#include "DigitalInputChannel.h"
 #include "InputChannel.h"
 
-class MainBoardInputChannel : public InputChannel
+class MainBoardInputChannel : public DigitalInputChannel
 {
 
 public:
 	explicit MainBoardInputChannel(uint8_t input_pin);
-	uint8_t read() override;
+	int read() override;
 	void setup() override;
-
 };
 
 

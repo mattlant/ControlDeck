@@ -1,3 +1,4 @@
+#include "DigitalInputChannel.h"
 #include <Joystick.h>
 #include <PCF8574.h>
 #include "ButtonBox.h"

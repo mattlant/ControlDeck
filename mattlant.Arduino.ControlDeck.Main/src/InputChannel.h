@@ -11,14 +11,14 @@
 
 class InputChannel
 {
-protected:
-	uint8_t input_pin_ = 0;
 
 public:
-	virtual ~InputChannel() = default;
-	InputChannel(uint8_t input_pin);
+	virtual ~InputChannel();
+	InputChannel();
 
-	virtual uint8_t read();
+
+
+	virtual int read();
 	virtual void setup();
 };
 
