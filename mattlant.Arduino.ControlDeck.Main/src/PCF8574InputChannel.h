@@ -17,7 +17,7 @@ class PCF8574InputChannel : public DigitalInputChannel
 {
 public:
 	//TODO: Inject the board itself so it can be reused and started across all inputs.
-	PCF8574InputChannel(PCF8574* io_board, int input_ids[], int input_count);
+	PCF8574InputChannel(uint8_t io_address, int input_ids[], int input_count);
 
 
 public:
@@ -26,6 +26,7 @@ public:
 
 protected:
 	PCF8574* io_board_;
+	int io_address_;
 };
 
 #endif

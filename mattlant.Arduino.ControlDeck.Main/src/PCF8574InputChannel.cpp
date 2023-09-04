@@ -4,9 +4,10 @@
 
 #include "PCF8574InputChannel.h"
 
-PCF8574InputChannel::PCF8574InputChannel(PCF8574* io_board, int input_ids[], int input_count): DigitalInputChannel(input_ids, input_count),
-                                                                          io_board_(io_board)
+PCF8574InputChannel::PCF8574InputChannel(uint8_t io_address, int input_ids[], int input_count): DigitalInputChannel(input_ids, input_count)
+                                                                        
 {
+	io_board_ = new PCF8574(io_address);
 }
 
 int PCF8574InputChannel::read(int pin_id)
