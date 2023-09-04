@@ -9,10 +9,9 @@ ButtonBox::ButtonBox(ButtonBase* buttons[], int button_count, uint8_t loop_delay
 
 void ButtonBox::setup()
 {
-	joystick_->begin();
 
-	for(int i = 0; i < button_count_; i++)
-		buttons_[i]->set_joystick(*joystick_);
+	//for(int i = 0; i < button_count_; i++)
+	//	buttons_[i]->set_joystick(*joystick_);
 
 
 	for(int i = 0; i < button_count_; i++)

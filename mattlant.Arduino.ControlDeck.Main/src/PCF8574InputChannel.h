@@ -21,7 +21,7 @@ public:
 
 
 public:
-	int read_int(int pin_id) override;
+	int read(int pin_id) override;
 	void setup() override;
 
 protected:

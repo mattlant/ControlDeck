@@ -80,7 +80,7 @@
     <TargetOSAndVersion>Arduino</TargetOSAndVersion>
   </PropertyGroup>
   <ItemGroup>
-    <ClCompile Include="src\DigitalInputChannel.cpp" />
+    <ClCompile Include="src\JoystickOutputChannel.cpp" />
     <ClCompile Include="src\InputChannelFactory.cpp" />
     <ClCompile Include="src\mattlant.Arduino.ControlDeck.Main.ino">
       <FileType>CppCode</FileType>
@@ -88,12 +88,10 @@
     </ClCompile>
     <ClCompile Include="src\ButtonBase.cpp" />
     <ClCompile Include="src\ButtonBox.cpp" />
-    <ClCompile Include="src\InputChannel.cpp" />
     <ClCompile Include="src\MainBoardInputChannel.cpp" />
     <ClCompile Include="src\MomentaryButton.cpp" />
     <ClCompile Include="src\PCF8574InputChannel.cpp" />
     <ClCompile Include="src\ToggleSwitch.cpp" />
-    <ClCompile Include="src\util.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\arduino folders read me.txt">
@@ -106,10 +104,12 @@
     <ClInclude Include="src\ButtonBase.h" />
     <ClInclude Include="src\ButtonBox.h" />
     <ClInclude Include="src\DigitalInputChannel.h" />
+    <ClInclude Include="src\JoystickOutputChannel.h" />
     <ClInclude Include="src\InputChannel.h" />
     <ClInclude Include="src\InputChannelFactory.h" />
     <ClInclude Include="src\MainBoardInputChannel.h" />
     <ClInclude Include="src\MomentaryButton.h" />
+    <ClInclude Include="src\OutputChannel.h" />
     <ClInclude Include="src\PCF8574InputChannel.h" />
     <ClInclude Include="src\ToggleSwitch.h" />
     <ClInclude Include="src\util.h" />
@@ -119,14 +119,14 @@
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(ProjectDir)src;$(ProjectDir)..\..\..\..\..\OneDrive\Documents\Arduino\libraries\Joystick\src;$(ProjectDir)..\..\..\..\..\OneDrive\Documents\Arduino\libraries\PCF8574_library;$(ProjectDir)..\..\..\..\..\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\libraries\Wire\src;$(ProjectDir)..\..\..\..\..\OneDrive\Documents\Arduino\libraries\PCF8574_library\utility;$(ProjectDir)..\..\..\..\..\..\..\\Users\\mattl\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\cores\\arduino;$(ProjectDir)..\..\..\..\..\..\..\\Users\\mattl\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\variants\\leonardo;$(ProjectDir)..\..\..\..\..\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\7.3.0\include;$(ProjectDir)..\..\..\..\..\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\7.3.0\include-fixed;$(ProjectDir)..\..\..\..\..\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\avr\include;$(ProjectDir)..\..\..\..\..\OneDrive\Documents\Arduino\libraries\Joystick\src;$(ProjectDir)..\..\..\..\..\OneDrive\Documents\Arduino\libraries\PCF8574_library</IncludePath>
+    <IncludePath>$(ProjectDir)src;$(ProjectDir)..\..\..\..\..\OneDrive\Documents\Arduino\libraries\PCF8574_library;$(ProjectDir)..\..\..\..\..\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\libraries\Wire\src;$(ProjectDir)..\..\..\..\..\OneDrive\Documents\Arduino\libraries\Joystick\src;$(ProjectDir)..\..\..\..\..\OneDrive\Documents\Arduino\libraries\PCF8574_library\utility;$(ProjectDir)..\..\..\..\..\..\..\\Users\\mattl\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\cores\\arduino;$(ProjectDir)..\..\..\..\..\..\..\\Users\\mattl\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\variants\\leonardo;$(ProjectDir)..\..\..\..\..\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\7.3.0\include;$(ProjectDir)..\..\..\..\..\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\7.3.0\include-fixed;$(ProjectDir)..\..\..\..\..\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\avr\include</IncludePath>
     <RemoteCCompileToolExe>$(ProjectDir)..\..\..\..\..\..\..\\Users\\mattl\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7\bin\avr-g++</RemoteCCompileToolExe>
     <RemoteCppCompileToolExe>$(ProjectDir)..\..\..\..\..\..\..\\Users\\mattl\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7\bin\avr-g++</RemoteCppCompileToolExe>
     <ValidateArchitecture>false</ValidateArchitecture>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)..\..\..\..\..\OneDrive\Documents\Arduino\libraries\Joystick\src;$(ProjectDir)..\..\..\..\..\OneDrive\Documents\Arduino\libraries\PCF8574_library;$(ProjectDir)..\..\..\..\..\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\libraries\Wire\src;$(ProjectDir)..\..\..\..\..\OneDrive\Documents\Arduino\libraries\PCF8574_library\utility;$(ProjectDir)..\..\..\..\..\..\..\\Users\\mattl\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\cores\\arduino;$(ProjectDir)..\..\..\..\..\..\..\\Users\\mattl\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\variants\\leonardo;$(ProjectDir)..\..\..\..\..\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\7.3.0\include;$(ProjectDir)..\..\..\..\..\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\7.3.0\include-fixed;$(ProjectDir)..\..\..\..\..\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\avr\include;$(ProjectDir)..\..\..\..\..\OneDrive\Documents\Arduino\libraries\Joystick\src;$(ProjectDir)..\..\..\..\..\OneDrive\Documents\Arduino\libraries\PCF8574_library;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)..\..\..\..\..\OneDrive\Documents\Arduino\libraries\PCF8574_library;$(ProjectDir)..\..\..\..\..\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\libraries\Wire\src;$(ProjectDir)..\..\..\..\..\OneDrive\Documents\Arduino\libraries\Joystick\src;$(ProjectDir)..\..\..\..\..\OneDrive\Documents\Arduino\libraries\PCF8574_library\utility;$(ProjectDir)..\..\..\..\..\..\..\\Users\\mattl\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\cores\\arduino;$(ProjectDir)..\..\..\..\..\..\..\\Users\\mattl\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\variants\\leonardo;$(ProjectDir)..\..\..\..\..\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\7.3.0\include;$(ProjectDir)..\..\..\..\..\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\7.3.0\include-fixed;$(ProjectDir)..\..\..\..\..\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\avr\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <GccToolChain>$(ProjectDir)..\..\..\..\..\..\..\\Users\\mattl\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7\bin\avr-g++</GccToolChain>
       <CppLanguageStandard>gnu++11</CppLanguageStandard>
       <CLanguageStandard>gnu11</CLanguageStandard>
@@ -142,7 +142,7 @@
   <ImportGroup Label="ExtensionTargets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties arduino.upload.port="COM3" config.Debug.customdebug_leonardo_debugger_type="universal" />
+      <UserProperties arduino.upload.port="COM7" config.Debug.customdebug_leonardo_debugger_type="universal" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

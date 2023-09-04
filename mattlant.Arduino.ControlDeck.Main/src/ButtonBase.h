@@ -11,26 +11,25 @@
 #include <Joystick.h>
 
 #include "InputChannel.h"
+#include "OutputChannel.h"
 
 class ButtonBase
 {
 public:
-	ButtonBase(InputChannel* channel, int input_id, int button_number);
+	ButtonBase(InputChannel* channel, int input_id, OutputChannel* output_channel, int output_id);
 	virtual void setup();
 	virtual void process();
-	void set_joystick(Joystick_& joystick);
 
 protected:
-	InputChannel* channel_;
+	InputChannel* input_channel_;
 	int input_id_;
+	OutputChannel* output_channel_;
+	int output_id_;
 
-	Joystick_* joystick_;
-	uint8_t button_number_;
 	uint8_t last_input_state_ = 0;
 
 	uint8_t monitor_led = 8;
 	virtual void state_changed(uint8_t current_state);
-
 };
 
 

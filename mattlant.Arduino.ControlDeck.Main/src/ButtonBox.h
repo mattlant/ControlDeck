@@ -15,12 +15,6 @@
 class ButtonBox
 {
 protected:
-	Joystick_ buttonBox_internal = Joystick_(0x01,JOYSTICK_TYPE_JOYSTICK, 32, 0,
-	                                         false, false, false, false, false, false,
-	                                         false, false, false, false, false);
-
-	Joystick_* joystick_ = &buttonBox_internal;
-
 	ButtonBase** buttons_;
 	int button_count_;
 	uint8_t loop_delay_;

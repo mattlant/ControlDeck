@@ -12,19 +12,27 @@
 class InputChannel
 {
 protected:
-	int* input_ids_;
+	int* input_ids_; //int array
 	int input_count_;
 
 public:
-	virtual ~InputChannel();
-	explicit InputChannel(int input_ids[], int input_count);
+	virtual ~InputChannel()
+	= default;
+
+	explicit InputChannel(int input_ids[], int input_count): input_ids_(input_ids), input_count_(input_count)
+	{
+	}
 
 
+	virtual int read(int input_id)
+	{
+		return 0;
+	}
 
-	virtual int read_int(int input_id);
-	virtual uint8_t read_byte(int input_id);
-	virtual bool read_bit(int input_id);
-	virtual void setup();
+	//Do any channel setup/start in derived setup method, such as setting pin directions
+	virtual void setup()
+	{
+	}
 };
 
 

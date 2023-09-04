@@ -8,7 +8,7 @@ MainBoardInputChannel::MainBoardInputChannel(int input_ids[], int input_count): 
 {
 }
 
-int MainBoardInputChannel::read_int(int pin_id)
+int MainBoardInputChannel::read(int pin_id)
 {
 	return digitalRead(pin_id);
 }
