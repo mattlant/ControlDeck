@@ -45,6 +45,9 @@
     <ClCompile Include="src\JoystickOutputChannel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\KeyboardOutputChannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.mattlant.Arduino.ControlDeck.Main.vsarduino.h">
@@ -84,6 +87,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\JoystickOutputChannel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\KeyboardOutputChannel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
