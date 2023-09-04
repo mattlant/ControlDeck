@@ -2,6 +2,7 @@
 // 
 // 
 
+// ReSharper disable CppClangTidyBugproneNarrowingConversions
 #include "JoystickOutputChannel.h"
 
 #include "util.h"
@@ -9,7 +10,7 @@
 
 void JoystickOutputChannel::write(int button_id, int value) 
 {
-	if (button_id < 1000)
+	if (button_id < 0xFF)
 	{
 		SER_PRINT("CHANNEL_JOYBUTTON:");
 		SER_PRINT(button_id);
@@ -32,6 +33,8 @@ void JoystickOutputChannel::write(int button_id, int value)
 			break;
 		case JoystickButtons::ZAxis:
 			joystick_->setZAxis(value);
+			break;
+		default:
 			break;
 		}
 		//TODO: Add more joystick outputs

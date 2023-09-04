@@ -1,7 +1,7 @@
 // InputChannelFactory.h
 
-#ifndef _INPUTCHANNELFACTORY_h
-#define _INPUTCHANNELFACTORY_h
+#ifndef INPUTCHANNELFACTORY_h
+#define INPUTCHANNELFACTORY_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
 	#include "arduino.h"

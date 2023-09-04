@@ -1,7 +1,7 @@
 // Button.h
 
-#ifndef _TOGGLE_SWITCH_h
-#define _TOGGLE_SWITCH_h
+#ifndef TOGGLE_SWITCH_h
+#define TOGGLE_SWITCH_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "arduino.h"

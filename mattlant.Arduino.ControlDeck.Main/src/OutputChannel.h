@@ -1,7 +1,7 @@
 // OutputChannel.h
 
-#ifndef _OUTPUTCHANNEL_h
-#define _OUTPUTCHANNEL_h
+#ifndef OUTPUTCHANNEL_h
+#define OUTPUTCHANNEL_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "arduino.h"
@@ -16,19 +16,13 @@ protected:
 	int output_count_;
 
 public:
-	explicit OutputChannel(int output_ids[], int output_count): output_ids_(output_ids), output_count_(output_count)
-	{
-	}
+	explicit OutputChannel(int output_ids[], int output_count);
 
-	~OutputChannel() = default;
+	~OutputChannel();
 
-	virtual void begin()
-	{
-	}
+	virtual void begin();
 
-	virtual void write(int output_id, int value)
-	{
-	}
+	virtual void write(int output_id, int value);
 };
 
 

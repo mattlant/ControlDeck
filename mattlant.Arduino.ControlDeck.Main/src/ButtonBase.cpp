@@ -19,13 +19,17 @@ ButtonBase::ButtonBase(InputChannel* channel, int input_id, OutputChannel* outpu
 {
 }
 
+
+
 void ButtonBase::setup()
 {
 }
 
 void ButtonBase::process()
 {
-	const uint8_t current_state = input_channel_->read(input_id_);
+	uint8_t current_state = input_channel_->read(input_id_);
+	if(negate_input) current_state = !current_state;
+
 	//SER_PRINTLN("BUTTON_PROC");
 	if (last_input_state_ != current_state)
 	{
@@ -35,4 +39,10 @@ void ButtonBase::process()
 		this->state_changed(current_state);
 		last_input_state_ = current_state;
 	}
+
+}
+
+void ButtonBase::set_negate_input(bool negate)
+{
+	negate_input = negate;
 }

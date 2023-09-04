@@ -2,17 +2,21 @@
 
 This is the start of a large library of classes that can help you to build input/output controls efficiently and effectively for your projects in a very short amount of time. Check out the example below.
 
-_Note: Currently not structured for library sharing but will work on that later._
+_Note: This is a work in progress and subject to much change, and may get messy at times._
 
 A few highlights so far:
 - Clean and modular framework that will keep your code clean and easy to maintain and extend.
-- ButtonBox - A processor for controlling a button box you can use for sim racing, flights sims and more.
 - MomentaryButton - easy way to build out a simple push button.
+- Rotary Encoders with push button support. This is early work and is a polled implementation, but works well enough. (Based on https://github.com/John-Lluch/Encoder)
+Unfortunately this only works right now with MainBoardInputChannel for the encoder inputs.
 - ToggleSwitch - Have a sim racing game where the 'On' for the car is a momentary button, but you want to use a 
 **REAL** toggle or key ignition switch? Now you can! This will simulate the button presses the game expects to toggle on and off.
+- ButtonBox - A processor for controlling a button box you can use for sim racing, flights sims and more.
 - Outputs are abstracted as OutputChannel, two output channels are ready and More can be easily created, such as a midi or a serial output channel.
 	- Joystick (uses Joystick Library. Requires Leonardo/Micro.) 
 	- Keyboard (Requires Leonardo/Micro.) 
+	- MainboardOutputChannel for outputting to digital pins on your device. (IO Expander output coming soon)
+	- Null - for testing!
 - Inputs are abstracted as InputChannel, with two input channels ready: 
 	- Arduino mainboard pin inputs 
 	- PFC8574 IO Expander support - Expand your digital inputs with built in support for this chip/board via PFC8574InputChannel.

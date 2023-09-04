@@ -8,10 +8,9 @@
 #else
 	#include "WProgram.h"
 #endif
-#include "DigitalInputChannel.h"
 #include "InputChannel.h"
 
-class MainBoardInputChannel : public DigitalInputChannel
+class MainBoardInputChannel : public InputChannel
 {
 
 public:

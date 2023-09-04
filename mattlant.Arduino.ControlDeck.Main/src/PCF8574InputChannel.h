@@ -1,7 +1,8 @@
 // PCF8574InputChannel.h
+#ifndef PFC8574INPUTCHANNEL_h
+#define PFC8574INPUTCHANNEL_h
 
-#ifndef _PFC8574INPUTCHANNEL_h
-#define _PFC8574INPUTCHANNEL_h
+
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "arduino.h"
@@ -9,14 +10,21 @@
 	#include "WProgram.h"
 #endif
 #include "InputChannel.h"
+
 #include <PCF8574.h>
 
-#include "DigitalInputChannel.h"
+constexpr uint8_t PCF_ADDR_B000 = 0x20;
+constexpr uint8_t PCF_ADDR_B001 = 0x21;
+constexpr uint8_t PCF_ADDR_B010 = 0x22;
+constexpr uint8_t PCF_ADDR_B011 = 0x23;
+constexpr uint8_t PCF_ADDR_B100 = 0x24;
+constexpr uint8_t PCF_ADDR_B101 = 0x25;
+constexpr uint8_t PCF_ADDR_B110 = 0x26;
+constexpr uint8_t PCF_ADDR_B111 = 0x27;
 
-class PCF8574InputChannel : public DigitalInputChannel
+class PCF8574InputChannel : public InputChannel
 {
 public:
-	//TODO: Inject the board itself so it can be reused and started across all inputs.
 	PCF8574InputChannel(uint8_t io_address, int input_ids[], int input_count);
 
 

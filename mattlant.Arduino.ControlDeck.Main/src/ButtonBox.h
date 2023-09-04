@@ -1,7 +1,7 @@
 // ButtonBox.h
 
-#ifndef _BUTTONBOX_h
-#define _BUTTONBOX_h
+#ifndef BUTTONBOX_h
+#define BUTTONBOX_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "arduino.h"

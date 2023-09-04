@@ -14,15 +14,5 @@ MomentaryButton::MomentaryButton(InputChannel* channel, int input_id, OutputChan
 
 void MomentaryButton::state_changed(uint8_t current_state) 
 {
-	if(current_state == HIGH)
-		SER_PRINTLN("MOMBUTTON PRESSED");
-	else
-		SER_PRINTLN("MOMBUTTON RELEASED");
-
 	output_channel_->write(output_id_, current_state);
-
-	//TODO: NEED TO REMOVE OLD TEST CODE
-	digitalWrite(monitor_led, current_state);
 }
-
-

@@ -4,26 +4,36 @@
 #define _KEYBOARDOUTPUTCHANNEL_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
-	#include "arduino.h"
+#include "arduino.h"
 #else
 	#include "WProgram.h"
 #endif
+
+#include <Keyboard.h>
 #include "OutputChannel.h"
 
 class KeyboardOutputChannel : public OutputChannel
 {
- protected:
+protected:
 
 
- public:
-	KeyboardOutputChannel(int output_ids[], int output_count)
-		: OutputChannel(output_ids, output_count)
+public:
+	KeyboardOutputChannel()
+		: OutputChannel(nullptr, 0)
 	{
 	}
 
-	void begin() override;
-	void write(int output_id, int value) override;
+	void begin() override
+	{
+		Keyboard.begin();
+	}
+
+	void write(int output_id, int value) override
+	{
+		if (value == 0)
+			return;
+		Keyboard.write(output_id);
+	}
 };
 
 #endif
-

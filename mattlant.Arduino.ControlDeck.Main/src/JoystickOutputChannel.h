@@ -1,7 +1,7 @@
 // JoystickOutputChannel.h
 
-#ifndef _HIDJOYSTICKOUTPUTCHANNEL_h
-#define _HIDJOYSTICKOUTPUTCHANNEL_h
+#ifndef HIDJOYSTICKOUTPUTCHANNEL_h
+#define HIDJOYSTICKOUTPUTCHANNEL_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "arduino.h"

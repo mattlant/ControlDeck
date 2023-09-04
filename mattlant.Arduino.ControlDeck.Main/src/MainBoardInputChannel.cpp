@@ -4,7 +4,7 @@
 
 #include "MainBoardInputChannel.h"
 
-MainBoardInputChannel::MainBoardInputChannel(int input_ids[], int input_count): DigitalInputChannel(input_ids, input_count)
+MainBoardInputChannel::MainBoardInputChannel(int input_ids[], int input_count): InputChannel(input_ids, input_count)
 {
 }
 
