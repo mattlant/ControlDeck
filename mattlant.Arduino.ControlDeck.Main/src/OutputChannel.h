@@ -22,7 +22,7 @@ public:
 
 	~OutputChannel() = default;
 
-	virtual void setup()
+	virtual void begin()
 	{
 	}
 

@@ -40,7 +40,7 @@ public:
 
 	~JoystickOutputChannel() = default;
 
-	void setup() override
+	void begin() override
 	{
 		joystick_->begin();
 	}

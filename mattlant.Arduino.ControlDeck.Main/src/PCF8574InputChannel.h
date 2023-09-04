@@ -22,7 +22,7 @@ public:
 
 public:
 	int read(int pin_id) override;
-	void setup() override;
+	void begin() override;
 
 protected:
 	PCF8574* io_board_;

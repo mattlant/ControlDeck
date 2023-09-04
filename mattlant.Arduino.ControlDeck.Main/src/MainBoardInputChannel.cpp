@@ -13,7 +13,7 @@ int MainBoardInputChannel::read(int pin_id)
 	return digitalRead(pin_id);
 }
 
-void MainBoardInputChannel::setup()
+void MainBoardInputChannel::begin()
 {
 	for (int i = 0; i < input_count_; i++)
 		pinMode(input_ids_[i], INPUT);

@@ -29,8 +29,8 @@ public:
 		return 0;
 	}
 
-	//Do any channel setup/start in derived setup method, such as setting pin directions
-	virtual void setup()
+	//Do any channel setup/start in derived begin method, such as setting pin directions
+	virtual void begin()
 	{
 	}
 };

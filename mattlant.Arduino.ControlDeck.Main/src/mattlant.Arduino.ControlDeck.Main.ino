@@ -28,9 +28,9 @@ ButtonBox button_box = ButtonBox(buttons_array, BUTTON_COUNT, LOOP_DELAY);
 
 void setup()
 {
-	joystick_channel.setup();
-	uno_input_channel.setup();
-	ioboard1_input_channel.setup();
+	joystick_channel.begin();
+	uno_input_channel.begin();
+	ioboard1_input_channel.begin();
 	button_box.setup();
 }
 

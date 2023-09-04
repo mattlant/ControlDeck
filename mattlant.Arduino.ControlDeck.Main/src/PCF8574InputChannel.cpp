@@ -15,7 +15,7 @@ int PCF8574InputChannel::read(int pin_id)
 	return io_board_->digitalRead(pin_id);
 }
 
-void PCF8574InputChannel::setup()
+void PCF8574InputChannel::begin()
 {
 	for (int i = 0; i < input_count_; i++)
 		io_board_->pinMode(input_ids_[i], INPUT);
