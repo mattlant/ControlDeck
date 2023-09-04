@@ -7,6 +7,7 @@ This is the start of a large library of classes that can help you to build input
 Currently not structured for library sharing but will work on that later.
 
 A few highlights so far:
+- Clean and modular framework that will keep your code clean and easy to maintain and extend.
 - ButtonBox - A processor for controlling a button box you can use for sim racing, flights sims and more.
 - MomentaryButton - easy way to build out a simple push button.
 - ToggleSwitch - Have a sim racing game where the 'On' for the car is a momentary button, but you want to use a 
