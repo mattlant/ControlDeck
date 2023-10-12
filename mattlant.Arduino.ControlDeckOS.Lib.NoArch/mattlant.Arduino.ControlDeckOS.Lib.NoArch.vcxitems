@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{4a23d39f-8bed-432a-af8f-cd5f8524468d}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)readme.txt" />
+    <Text Include="$(MSBuildThisFileDirectory)library.properties" />
+    <Text Include="$(MSBuildThisFileDirectory)src\mattlant.Arduino.ControlDeckOS.Lib.NoArch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- <ClInclude Include="$(MSBuildThisFileDirectory)mattlant.Arduino.ControlDeckOS.Lib.NoArch.h" /> -->
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Collections\CircularBuffer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Collections\TaskQueue.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Controls\AnalogJoystickControl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Controls\ButtonBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Controls\Control.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Controls\Encoder.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Controls\InputDebouncer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Controls\LatchToMomentary.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Controls\MatrixButtonControl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Controls\MomentaryButton.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Devices\DeviceKernelTask.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Devices\InputDevice.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Devices\IoDevice.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Devices\JoystickOutputDevice.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Devices\KeyboardOutputDevice.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Devices\MainBoardInputDevice.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Devices\MainBoardOutputDevice.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Devices\MatrixInputDevice.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Devices\MuxInputDevice.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Devices\NullOutputDevice.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Devices\OutputDevice.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Devices\PulseOutputTask.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Devices\SerialOutputDevice.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\LinkedList.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\OS\CDKernel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\OS\EmKMod.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\OS\KernelCommon.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\OS\KernelTask.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\OS\KEventManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\OS\KExecutable.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\OS\StdIOBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Serial\ArduinoHWSerial_StandardIO.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Serial\MShell.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Serial\SerialProcessor.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Sketch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Collections\CircularBuffer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Collections\TaskQueue.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Controls\AnalogJoystickControl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Controls\ButtonBase.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Controls\Control.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Controls\Encoder.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Controls\InputDebouncer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Controls\LatchToMomentary.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Controls\MatrixButtonControl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Controls\MomentaryButton.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Devices\DeviceKernelTask.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Devices\InputDevice.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Devices\IoDevice.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Devices\JoystickOutputDevice.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Devices\KeyboardOutputDevice.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Devices\MainBoardInputDevice.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Devices\MainBoardOutputDevice.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Devices\MatrixInputDevice.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Devices\MuxInputDevice.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Devices\NullOutputDevice.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Devices\OutputDevice.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Devices\PulseOutputTask.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Devices\SerialOutputDevice.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\LinkedList.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\mattlant.Arduino.ControlDeckOS.Lib.NoArch.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\OS\CDKernel.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\OS\EmKMod.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\OS\KernelTask.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\OS\KEventManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\OS\KExecutable.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\OS\StdIOBase.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Serial\HWSerial_StandardIO.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Serial\MShell.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Serial\SerialProcessor.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Sketch.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\util.cpp" />
+  </ItemGroup>
+</Project>

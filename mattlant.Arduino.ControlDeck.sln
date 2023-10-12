@@ -10,6 +10,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mattlant.Arduino.ControlDeck.Main", "mattlant.Arduino.ControlDeck.Main\mattlant.Arduino.ControlDeck.Main.vcxproj", "{2E4600A9-C228-443E-90C8-0B6BE2CBF4EB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mattlant.Arduino.ControlDeckOS.Lib.NoArch", "mattlant.Arduino.ControlDeckOS.Lib.NoArch\mattlant.Arduino.ControlDeckOS.Lib.NoArch.vcxitems", "{4A23D39F-8BED-432A-AF8F-CD5F8524468D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CDOS.Tests", "CDOS.Tests\CDOS.Tests.vcxproj", "{F8B5D54D-51E6-4C5B-ACC4-CE0DEE0BBCCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -46,11 +50,32 @@ Global
 		{2E4600A9-C228-443E-90C8-0B6BE2CBF4EB}.Release|x86.ActiveCfg = Release|x86
 		{2E4600A9-C228-443E-90C8-0B6BE2CBF4EB}.Release|x86.Build.0 = Release|x86
 		{2E4600A9-C228-443E-90C8-0B6BE2CBF4EB}.Release|x86.Deploy.0 = Release|x86
+		{F8B5D54D-51E6-4C5B-ACC4-CE0DEE0BBCCE}.Debug|ARM.ActiveCfg = Debug|x64
+		{F8B5D54D-51E6-4C5B-ACC4-CE0DEE0BBCCE}.Debug|ARM.Build.0 = Debug|x64
+		{F8B5D54D-51E6-4C5B-ACC4-CE0DEE0BBCCE}.Debug|ARM64.ActiveCfg = Debug|x64
+		{F8B5D54D-51E6-4C5B-ACC4-CE0DEE0BBCCE}.Debug|ARM64.Build.0 = Debug|x64
+		{F8B5D54D-51E6-4C5B-ACC4-CE0DEE0BBCCE}.Debug|x64.ActiveCfg = Debug|x64
+		{F8B5D54D-51E6-4C5B-ACC4-CE0DEE0BBCCE}.Debug|x64.Build.0 = Debug|x64
+		{F8B5D54D-51E6-4C5B-ACC4-CE0DEE0BBCCE}.Debug|x86.ActiveCfg = Debug|Win32
+		{F8B5D54D-51E6-4C5B-ACC4-CE0DEE0BBCCE}.Debug|x86.Build.0 = Debug|Win32
+		{F8B5D54D-51E6-4C5B-ACC4-CE0DEE0BBCCE}.Release|ARM.ActiveCfg = Release|x64
+		{F8B5D54D-51E6-4C5B-ACC4-CE0DEE0BBCCE}.Release|ARM.Build.0 = Release|x64
+		{F8B5D54D-51E6-4C5B-ACC4-CE0DEE0BBCCE}.Release|ARM64.ActiveCfg = Release|x64
+		{F8B5D54D-51E6-4C5B-ACC4-CE0DEE0BBCCE}.Release|ARM64.Build.0 = Release|x64
+		{F8B5D54D-51E6-4C5B-ACC4-CE0DEE0BBCCE}.Release|x64.ActiveCfg = Release|x64
+		{F8B5D54D-51E6-4C5B-ACC4-CE0DEE0BBCCE}.Release|x64.Build.0 = Release|x64
+		{F8B5D54D-51E6-4C5B-ACC4-CE0DEE0BBCCE}.Release|x86.ActiveCfg = Release|Win32
+		{F8B5D54D-51E6-4C5B-ACC4-CE0DEE0BBCCE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {703A1104-BECB-4532-8076-248C29CB703A}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		mattlant.Arduino.ControlDeckOS.Lib.NoArch\mattlant.Arduino.ControlDeckOS.Lib.NoArch.vcxitems*{2e4600a9-c228-443e-90c8-0b6be2cbf4eb}*SharedItemsImports = 4
+		mattlant.Arduino.ControlDeckOS.Lib.NoArch\mattlant.Arduino.ControlDeckOS.Lib.NoArch.vcxitems*{4a23d39f-8bed-432a-af8f-cd5f8524468d}*SharedItemsImports = 9
+		mattlant.Arduino.ControlDeckOS.Lib.NoArch\mattlant.Arduino.ControlDeckOS.Lib.NoArch.vcxitems*{f8b5d54d-51e6-4c5b-acc4-ce0dee0bbcce}*SharedItemsImports = 4
 	EndGlobalSection
 EndGlobal
